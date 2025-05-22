@@ -22,7 +22,7 @@ proc parseTx(hexLine: string) =
       tx = decodeTx(bytes)
       address = tx.recoverSender().expect("valid signature")
 
-    tx.validate(FkLondon)
+    tx.validate(FkPrague)
 
     # everything ok
     echo "0x", address.toHex
